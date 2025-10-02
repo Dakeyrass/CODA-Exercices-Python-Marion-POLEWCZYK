@@ -103,6 +103,97 @@ def exercice20():
     nom = input("Quel est ton nom?")
     print(f"Je sais que ton nom est {nom} et que tu as {age} ans.")
 
+def exercice21():
+    nbr = int(input("Choisi un nombre"))
+    if nbr < 0:
+        print("Ton nombre est négatif")
+    elif nbr > 0:
+        print("Ton nombre est positif")
+    else:
+        print("Ton nombre est nul")
+
+def exercice22():
+    age = int(input("Entrez votre age."))
+    if age >= 18:
+        print("Vous êtes majeur.")
+    else:
+        print("Vous êtes mineur.")
+
+def exercice23():
+    note = int(input("Entrez votre note."))
+    if note <20 and note >= 10:
+        print("Validé")
+    elif note < 10:
+        print("Non validé")
+    else:
+        print("Erreur, entrez votre note.")
+
+def exercice24():
+    nbr_1 = int(input("Entrez un nombre"))
+    nbr_2 = int(input("Entrer un second nombre"))
+    if nbr_1 > nbr_2:
+        print(f"{nbr_1} est plus grand")
+    else:
+        print(f"{nbr_2} est plus grand")
+    
+def exercice25():
+    nbr_1 = int(input("Entrez un nombre"))
+    nbr_2 = int(input("Entrer un second nombre"))
+    if nbr_1 > nbr_2:
+        print(f"{nbr_1} et {nbr_2} sont décroissants.")
+    else:
+        print(f"{nbr_1} et {nbr_2} sont croissants.")
+
+def exercice26():
+    nbr = int(input("Entrez un nombre."))
+    if  nbr % 5 == 0:
+        print("Le nombre est divisible par 5.")
+    else:
+        print("Le nombre n'est pas divisible par 5.")
+
+def exercice27():
+    age = int(input("Entrez votre âge"))
+    if age<12:
+        print("Vous êtes un enfant.")
+    elif age >= 12 and age <= 17:
+        print("Vous êtes un ado.")
+    else:
+        print("Vous êtes un adulte")
+
+def exercice28():
+    temperature = int(input("Entrez une température"))
+    if temperature < 0:
+        print("C'est de la glace.")
+    elif 0 <= temperature <= 100:
+        print("C'est de l'eau liquide")
+    else:
+        print("C'est de la vapeur.")
+
+def exercice29():
+    note = int(input("Entrez votre note."))
+    if note <= 20:
+        if note <= 8:
+            print("Vous êtes recalé")
+        elif note <= 11:
+            print("Vous avez eu chaud au cul")
+        elif note <= 14:
+            print("C'est bien")
+        else: 
+            print("C'est très bien")
+    else:
+        print("Entrez une note en dessous de 20.")
+    
+def exercice30():
+    n = int(input("Entrez un nombre"))
+    i = 0
+    i += 1
+    for i in range(n):
+        i += 1
+        print(i)
+
+def exercice31():
+    
+
 def main():
 # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -146,6 +237,26 @@ def main():
         exercice19()
     elif choix == "20":
         exercice20()
+    elif choix == "21":
+        exercice21()
+    elif choix == "22":
+        exercice22()
+    elif choix == "23":
+        exercice23()
+    elif choix == "24":
+        exercice24()
+    elif choix == "25":
+        exercice25()
+    elif choix == "26":
+        exercice26()
+    elif choix == "27":
+        exercice27()
+    elif choix == "28":
+        exercice28()
+    elif choix == "29":
+        exercice29()
+    elif choix == "30":
+        exercice30()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
