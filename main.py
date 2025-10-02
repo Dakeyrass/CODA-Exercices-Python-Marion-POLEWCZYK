@@ -50,6 +50,59 @@ def exercice10():
     double = nbr*2
     print(f"Le double de {nbr} est de {double}.")
 
+def exercice11():
+    nbr = int(input("Entrer un nombre"))
+    moitié = nbr/2
+    print(f"La moitié de {nbr} est de {moitié}.")
+
+def exercice13():
+    i = 0
+    for i in range(6):
+        print(i)
+        i += 1
+
+def exercice12():
+    i = 0
+    for i in range(5):
+        print("feur")
+        i += 1 
+
+def exercice14():
+    i = 0
+    for i in range(5):
+        multiplication = 2*i+1
+        print(f"2 x {i+1} = {multiplication}")
+
+def exercice15():
+    cote = int(input("De quelle longueur est le côté du carré?"))
+    perimetre = cote*4
+    print(f"Le périmètre du carré est de {perimetre} cm.")
+
+def exercice16():
+    cote = int(input("De quelle longueur est le côté du carré?"))
+    aire = cote*cote
+    print(f"L'aire du carré est de {aire} cm.")
+
+def exercice17():
+    euro = int(input("Combien d'euros voulez-vous convertir?"))
+    conversion = euro*1.1
+    print(f"Vos {euro} euros valent {conversion} dollars.")
+
+def exercice19():
+    prix = int(input("Quel est le prix de l'article?"))
+    prix_tva = prix*1.2
+    print(f"Le prix avec TVA est désormais de {prix_tva}. ")
+
+def exercice18():
+    minute = int(input("Combien de minutes ?"))
+    conversion_seconde = minute*60
+    print(f"{minute} minutes vaut {conversion_seconde} secondes.")
+
+def exercice20():
+    age = int(input("Quel est votre age?"))
+    nom = input("Quel est ton nom?")
+    print(f"Je sais que ton nom est {nom} et que tu as {age} ans.")
+
 def main():
 # Demande à l'utilisateur quel exercice exécuter
     choix = input("Entrez le numéro de l'exercice à exécuter : ")
@@ -73,6 +126,26 @@ def main():
         exercice9()
     elif choix == "10":
         exercice10()
+    elif choix == "11":
+        exercice11()
+    elif choix == "12":
+        exercice12()
+    elif choix == "13":
+        exercice13()
+    elif choix == "14":
+        exercice14()
+    elif choix == "15":
+        exercice15()
+    elif choix == "16":
+        exercice16()
+    elif choix == "17":
+        exercice17()
+    elif choix == "18":
+        exercice18()
+    elif choix == "19":
+        exercice19()
+    elif choix == "20":
+        exercice20()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
