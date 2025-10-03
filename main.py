@@ -1,3 +1,4 @@
+from random import randint
 # Exemple avec un seul exercice
 def exercice1():
     print("Exercice 1 : Bonjour le monde !")
@@ -192,7 +193,102 @@ def exercice30():
         print(i)
 
 def exercice31():
+    nbr_choisi = int(input("Entrez un nombre"))
+    for i in range(nbr_choisi):
+        print(nbr_choisi)
+        nbr_choisi -= 1
+
+def exercice32():
+    nbr_choosed = int(input("Entrez un nombre"))
+    nbr_final = 0
+    for i in range(nbr_choosed):
+        nbr_final += i + 1
+        print(i + 1,"+ ", end="")
+    print("=", nbr_final)
+
+def exercice33():
+    choosed_nbr = int(input("Entrez un nombre"))
+    final_nbr = 0
+    for i in range(choosed_nbr):
+        final_nbr = choosed_nbr*i
+        print(choosed_nbr, "x ",i, " = ",choosed_nbr*i)
+
+def exercice34():
+    choosed_nbr = int(input("Entrez un nombre pair"))
+    for i in range(choosed_nbr):
+        if i % 2 == 0:
+            print(i)
+    print(choosed_nbr)
+
+def exercice35():
+    choosed_nbr = int(input("Entrez un nombre entier"))
+    final_nbr = 0
+    for i in range(1, choosed_nbr):
+        i += 1
+        final_nbr = i*i
+        if final_nbr >= choosed_nbr:
+            print(choosed_nbr)
+            return choosed_nbr
+        print(final_nbr)
+
+def exercice36():
+    choosed_word = input("Ecrivez un mot")
+    tour_nbr = int(input("Choisissez un nombre"))
+    for i in range(tour_nbr):
+        print(choosed_word, end="")
+
+def exercice37():
+    for i in range(3): #nombre détages
+        for j in range(i + 1): #contenu de létage
+            print("*", end="")
+        print() #permet de sauter une ligne
+
+def exercice38():
+    first_nbr = int(input("Choisissez un nombre entier."))
+    operateur = input("Choisissez un opérateur")
+    second_nbr = int(input("Choisissez un second nombre entier."))
+    result = 0
+    if operateur == "x":
+        result = first_nbr*second_nbr
+        print(result)
+    elif operateur == "+":
+        result = first_nbr+second_nbr
+        print(result)
+    elif operateur == "-":
+        result = first_nbr-second_nbr
+        print(result)
+    elif operateur == "/":
+        result = first_nbr/second_nbr
+        print(result)
+    else:
+        print("Erreur")
+
+def exercice39():
+    secret_nbr = randint(1, 100)
+    guess = input("D'après vous, le numéro secret est-il pair ou impair?")
+    if secret_nbr % 2 == 0 and guess == "pair":
+        print("Gagné ! Le numéro secret était ", secret_nbr)
+    elif secret_nbr % 2 == 0 and guess == "pair":
+        print("Perdu ! Le numéro secret était ", secret_nbr)
+    elif secret_nbr % 2 != 0 and guess == "pair":
+        print("Perdu ! Le nombre secret était ", secret_nbr)
+    elif secret_nbr % 2 != 0 and guess == "impair":
+        print("Gagné ! Le nombre secret était ", secret_nbr)
+    else: 
+        print("Erreur")
+
+def exercice40():
+    password = input("Entrez un mot de passe ")
+    if len(password)>6:
+        print("Valide")
+    else:
+        print("Trop court!")
+
+def exercice41():
     
+
+        
+
 
 def main():
 # Demande à l'utilisateur quel exercice exécuter
@@ -257,6 +353,26 @@ def main():
         exercice29()
     elif choix == "30":
         exercice30()
+    elif choix == "31":
+        exercice31()
+    elif choix == "32":
+        exercice32()
+    elif choix == "33":
+        exercice33()
+    elif choix == "34":
+        exercice34()
+    elif choix == "35":
+        exercice35()
+    elif choix == "36":
+        exercice36()
+    elif choix == "37":
+        exercice37()
+    elif choix == "38":
+        exercice38()
+    elif choix == "39":
+        exercice39()
+    elif choix == "40":
+        exercice40()
     else:
         print("Exercice non reconnu.")
 if __name__ == "__main__":
